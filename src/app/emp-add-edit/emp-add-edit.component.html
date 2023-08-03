@@ -1,0 +1,64 @@
+<div mat-dialog-title>
+    <h1>Employee Form</h1>
+</div>
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+        <mat-label>First name</mat-label>
+        <input matInput type="text" placeholder="Ex. Bob">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input matInput type="text" placeholder="Ex. Martin">
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" placeholder="Ex. test@gmail.com">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Date of birth</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-radio-group aria-label="Select an option">
+            <mat-label><b>Gender</b></mat-label>
+            <mat-radio-button value="male">MALE</mat-radio-button>
+            <mat-radio-button value="female">FEMALE</mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Education</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let val of education" [value]="val">
+               {{ val }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Company</mat-label>
+            <input matInput type="text" placeholder="Ex. Google">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Expirience</mat-label>
+            <input type="number" matInput  placeholder="Ex. 4">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Package</mat-label>
+            <input matInput type="number" placeholder="Ex. 12">
+            <mat-hint>In euros</mat-hint>
+        </mat-form-field>
+    </div>
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button color="warn">Cancel</button>
+    <button mat-raised-button color="primary"> Save</button>
+</div>
