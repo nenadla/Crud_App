@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Seljak",
+      "lastName": "Sabanovic",
+      "email": "gf@gmail.com",
+      "dob": "2016-01-02T23:00:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "Proba",
+      "expirience": 3,
+      "package": 11,
+      "id": 1
+    }
+  ]
+}
