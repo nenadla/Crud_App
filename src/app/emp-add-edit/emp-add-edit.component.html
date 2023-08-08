@@ -50,7 +50,7 @@
     <div class="row">
         <mat-form-field appearance="outline">
             <mat-label>Expirience</mat-label>
-            <input type="number" matInput  placeholder="Ex. 4" formControlName="expirience">
+            <input type="number" matInput  placeholder="Ex. 4" formControlName="experience">
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Package</mat-label>
@@ -60,7 +60,7 @@
     </div>
 </div>
 <div mat-dialog-actions class="action">
-    <button mat-raised-button color="warn">Cancel</button>
-    <button mat-raised-button color="primary" type="submit"> Save</button>
+    <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit"> {{ data ? 'Update' : 'Save' }}</button>
 </div>
 </form>
